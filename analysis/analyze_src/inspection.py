@@ -1,17 +1,17 @@
 import pandas as pd
 from abc import ABC, abstractmethod
 
-class DataInspectionStatagey(ABC):
+class DataInspectionStratagey(ABC):
     @abstractmethod
     def inspect(self, df: pd.DataFrame):
         pass
 
-class DataTypeInspection(DataInspectionStatagey):
+class DataTypeInspection(DataInspectionStratagey):
     def inspect(self, df: pd.DataFrame):
         print("\nData Types and Non-null Counts:")
         print(df.info())
 
-class DataStatsSummary(DataInspectionStatagey):
+class DataStatsSummary(DataInspectionStratagey):
     def inspect(self, df: pd.DataFrame):
         print("\nSummary Statistics (Numerical Features):")
         print(df.describe())
@@ -19,11 +19,11 @@ class DataStatsSummary(DataInspectionStatagey):
         print(df.describe(include=["O"]))
     
 class DataInspector:
-    def __init__(self, strategy: DataInspectionStatagey):
-        self._stategy = strategy
+    def __init__(self, strategy: DataInspectionStratagey):
+        self._strategy = strategy
 
-    def set_strategy(self, strategy: DataInspectionStatagey):
-        self._stategy = strategy
+    def set_strategy(self, strategy: DataInspectionStratagey):
+        self._strategy = strategy
     
     def execute_inspection(self, df: pd.DataFrame):
         self._strategy.inspect(df)
