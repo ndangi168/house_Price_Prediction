@@ -31,8 +31,8 @@ class ZipDataIngestor(DataIngestor):
         if len(csv_files) > 1:
             raise ValueError("Multiple csv file found, please specify perticular one.")
 
-        csv_files_path = os.path.join("extraccted_data", csv_files[0])
-        df = pd.DataFrame(csv_files_path)
+        csv_files_path = os.path.join("extracted_data", csv_files[0])
+        df = pd.read_csv(csv_files_path)
 
         return df
 
@@ -48,12 +48,12 @@ class DataIngestorFactory:
 
 if __name__ == "__main__":
 
-    file_path = ""
+    # file_path = "/Users/nikhildangi/Documents/COde/housePricePrediction/data/archive.zip"
 
-    file_extension = os.path.splitext(file_path)[1]
+    # file_extension = os.path.splitext(file_path)[1]
 
-    data_ingestor = DataIngestorFactory.get_data_ingestor(file_extension)
+    # data_ingestor = DataIngestorFactory.get_data_ingestor(file_extension)
 
-    df = data_ingestor.ingest(file_path)
+    # df = data_ingestor.ingest(file_path)
 
     pass
