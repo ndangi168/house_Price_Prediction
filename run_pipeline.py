@@ -5,9 +5,6 @@ from zenml.integrations.mlflow.mlflow_utils import get_tracking_uri
 
 @click.command()
 def main():
-    """
-    Run the ML pipeline and start the MLflow UI for experiment tracking.
-    """
     # Run the pipeline
     run = ml_pipeline()
 

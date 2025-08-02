@@ -53,7 +53,7 @@ class FeatureEngineering:
         self._strategy = strategy
     def apply_feature_engineering(self, df: pd.DataFrame) -> pd.DataFrame:
         logging.info("Applying feature engineering strategy.")
-        self._strategy.apply_transformation(df)
+        return self._strategy.apply_transformation(df)
 
 if __name__ == "__main__":
     # df = pd.read_csv('../extracted-data/your_data_file.csv')

@@ -46,13 +46,13 @@ class FillingMissingValues(MissingValueHandlingStrategy):
         return df_cleaned
     
 class MissingValueHandler:
-    def __init___(self, strategy: MissingValueHandlingStrategy):
+    def __init__(self, strategy: MissingValueHandlingStrategy):
         self._strategy = strategy
     
     def set_strategy(self, strategy: MissingValueHandlingStrategy):
         self._strategy = strategy
 
-    def handdle_missing_value(self, df: pd.DataFrame) -> pd.DataFrame:
+    def handle_missing_value(self, df: pd.DataFrame) -> pd.DataFrame:
         logging.info("Executing missing value handling strategy.")
         return self._strategy.handle(df)
 
