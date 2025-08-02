@@ -54,7 +54,7 @@ house_Price_Prediction/
 └── README.md
 
 
-⚡ Installation & Setup
+## Installation & Setup
 
 1. Clone the Repository
 
@@ -74,59 +74,55 @@ pip install -r requirements.txt
 
 ⸻
 
-Requirements
+## Requirements
 
 Here’s the exact requirements.txt for reproducibility:
 
-# Core Python
+###  Core Python
 pandas==2.2.2
 numpy==1.26.4
 scikit-learn==1.4.2
 
-# ZenML & MLflow
+###  ZenML & MLflow
 zenml[server]==0.64.0
 mlflow==2.14.1
 
-# Visualization & Logging (optional but recommended)
+###  Visualization & Logging (optional but recommended)
 matplotlib==3.8.4
 seaborn==0.13.2
 loguru==0.7.2
 
-# For handling compressed datasets
+###  For handling compressed datasets
 zipfile36==0.1.3
 
-# For Jupyter or Notebook runs (optional)
+###  For Jupyter or Notebook runs (optional)
 jupyter==1.0.0
 ipykernel==6.29.4
 
 
 ⸻
 
-Running the Pipeline
-	1.	Initialize ZenML:
+## Running the Pipeline
 
-zenml init
+Initialize ZenML:
+1. zenml init
 
-	2.	Start ZenML Local Dashboard (macOS users set the env variable first):
+Start ZenML Local Dashboard (macOS users set the env variable first):
+2. export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES 
+3. zenml up
 
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-zenml up
+Run the Pipeline:
+4. python pipelines/training_pipeline.py
 
-	3.	Run the Pipeline:
-
-python pipelines/training_pipeline.py
-
-	4.	Track Experiments in MLflow:
-
+Track Experiments in MLflow:
 If not using ZenML Pro, run MLflow manually:
-
-mlflow ui --host 127.0.0.1 --port 5000
+5. mlflow ui --host 127.0.0.1 --port 5000
 
 Then open http://127.0.0.1:5000.
 
 ⸻
 
-📊 Features
+## Features
 	•	End-to-end automated ML pipeline
 	•	Configurable feature engineering and missing value handling
 	•	Built-in outlier detection
@@ -135,7 +131,7 @@ Then open http://127.0.0.1:5000.
 
 ⸻
 
-🧰 Tech Stack
+## Tech Stack
 	•	Python 3.9+
 	•	ZenML 0.64
 	•	MLflow
@@ -144,7 +140,7 @@ Then open http://127.0.0.1:5000.
 
 ⸻
 
-📈 Example Metrics
+## Example Metrics
 
 The pipeline evaluates the model using:
 	•	Mean Squared Error (MSE)
