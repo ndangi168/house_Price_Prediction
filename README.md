@@ -26,11 +26,8 @@ The project is built on **ZenML** to manage ML pipelines and artifacts efficient
 
 ---
 
-```markdown
 ## Project Structure
-
 ```
-
 house\_Price\_Prediction/
 │
 ├── data/                      \# Dataset archive
@@ -56,8 +53,6 @@ house\_Price\_Prediction/
 ├── mlruns/                     \# MLflow experiment storage
 ├── requirements.txt
 └── README.md
-
-```
 ```
 
 
