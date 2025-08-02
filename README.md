@@ -79,25 +79,25 @@ pip install -r requirements.txt
 Here’s the exact requirements.txt for reproducibility:
 
 ###  Core Python
-pandas==2.2.2
-numpy==1.26.4
-scikit-learn==1.4.2
+	•	pandas==2.2.2
+	•	numpy==1.26.4
+	•	scikit-learn==1.4.2
 
 ###  ZenML & MLflow
-zenml[server]==0.64.0
-mlflow==2.14.1
+	•	zenml[server]==0.64.0
+	•	mlflow==2.14.1
 
 ###  Visualization & Logging (optional but recommended)
-matplotlib==3.8.4
-seaborn==0.13.2
-loguru==0.7.2
+	•	matplotlib==3.8.4
+	•	seaborn==0.13.2
+	•	loguru==0.7.2
 
 ###  For handling compressed datasets
-zipfile36==0.1.3
+	•	zipfile36==0.1.3
 
 ###  For Jupyter or Notebook runs (optional)
-jupyter==1.0.0
-ipykernel==6.29.4
+	•	jupyter==1.0.0
+	•	ipykernel==6.29.4
 
 
 ⸻
@@ -105,17 +105,21 @@ ipykernel==6.29.4
 ## Running the Pipeline
 
 Initialize ZenML:
+
 1. zenml init
 
 Start ZenML Local Dashboard (macOS users set the env variable first):
+
 2. export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES 
 3. zenml up
 
 Run the Pipeline:
+
 4. python pipelines/training_pipeline.py
 
 Track Experiments in MLflow:
 If not using ZenML Pro, run MLflow manually:
+
 5. mlflow ui --host 127.0.0.1 --port 5000
 
 Then open http://127.0.0.1:5000.
