@@ -26,32 +26,39 @@ The project is built on **ZenML** to manage ML pipelines and artifacts efficient
 
 ---
 
+```markdown
 ## Project Structure
-house_Price_Prediction/
+
+```
+
+house\_Price\_Prediction/
 │
-├── data/                      # Dataset archive
-├── steps/                     # ZenML steps for each pipeline stage
-│   ├── data_ingestion_steps.py
-│   ├── handle_missing_values_steps.py
-│   ├── feature_engineering_step.py
-│   ├── outlier_detection_step.py
-│   ├── data_splitter_step.py
-│   ├── model_builder_step.py
-│   └── model_evaluator_step.py
+├── data/                      \# Dataset archive
+├── steps/                     \# ZenML steps for each pipeline stage
+│   ├── data\_ingestion\_steps.py
+│   ├── handle\_missing\_values\_steps.py
+│   ├── feature\_engineering\_step.py
+│   ├── outlier\_detection\_step.py
+│   ├── data\_splitter\_step.py
+│   ├── model\_builder\_step.py
+│   └── model\_evaluator\_step.py
 │
-├── src/                       # Core ML logic
-│   ├── handle_missing_values.py
-│   ├── feature_engineering.py
-│   ├── data_splitter.py
-│   ├── model_builder.py
-│   └── model_evaluator.py
+├── src/                       \# Core ML logic
+│   ├── handle\_missing\_values.py
+│   ├── feature\_engineering.py
+│   ├── data\_splitter.py
+│   ├── model\_builder.py
+│   └── model\_evaluator.py
 │
 ├── pipelines/
-│   └── training_pipeline.py    # Main ZenML pipeline definition
+│   └── training\_pipeline.py    \# Main ZenML pipeline definition
 │
-├── mlruns/                     # MLflow experiment storage
+├── mlruns/                     \# MLflow experiment storage
 ├── requirements.txt
 └── README.md
+
+```
+```
 
 
 ## Installation & Setup
